@@ -51,9 +51,7 @@ app.get('/random/date', (req, res) => {
   if (startDate >= endDate) {
     return res.status(400).json({ error: 'startDate must be earlier than endDate.' });
   }
-
   
-
   const randomTime = startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime());
   const randomDate = new Date(randomTime);
   res.json({ startDate: startDate.toISOString(), endDate: endDate.toISOString(), randomDate: randomDate.toISOString() });
