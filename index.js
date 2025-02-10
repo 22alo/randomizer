@@ -11,6 +11,8 @@ app.get('/', (req, res) => {
   res.send('Welcome to the Randomizer Service! Use /random/number, /random/string, /random/color, or /random/date.');
 });
 
+
+
 // Generate a random number between min and max
 app.get('/random/number', (req, res) => {
   const min = parseInt(req.query.min) || 0;
