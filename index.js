@@ -24,8 +24,6 @@ app.get('/random/number', (req, res) => {
   res.json({ min, max, randomNumber });
 });
 
-
-
 // Generate a random string of specified length
 app.get('/random/string', (req, res) => {
   const length = parseInt(req.query.length) || 10;
